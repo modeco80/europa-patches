@@ -1,0 +1,82 @@
+{
+    "patchName": "Lily\\HostFS",
+    "patchAuthor": "modeco80",
+    "patchDescription": "HostFS for Starfighter (region usa)",
+    "patchSegments": [
+        {
+            "name": "Thunk CPS2CDStore_ct",
+            "org": "0x302990",
+            "source": "obj/usa/CPS2CDStore_ct.bin"
+        },
+        {
+            "name": "Thunk CPS2CDStore_dt",
+            "org": "0x302b20",
+            "source": "obj/usa/CPS2CDStore_dt.bin"
+        },
+        {
+            "name": "Thunk CPS2CDStore_Open",
+            "org": "0x302c20",
+            "source": "obj/usa/CPS2CDStore_Open.bin"
+        },
+        {
+            "name": "Thunk CPS2CDStore_Close",
+            "org": "0x302d20",
+            "source": "obj/usa/CPS2CDStore_Close.bin"
+        },
+        {
+            "name": "Thunk CPS2CDStore_SeekToBeginning",
+            "org": "0x302d50",
+            "source": "obj/usa/CPS2CDStore_SeekToBeginning.bin"
+        },
+        {
+            "name": "Thunk CPS2CDStore_Seek",
+            "org": "0x302da0",
+            "source": "obj/usa/CPS2CDStore_Seek.bin"
+        },
+        {
+            "name": "Thunk CPS2CDStore_SeekToEnd",
+            "org": "0x302e00",
+            "source": "obj/usa/CPS2CDStore_SeekToEnd.bin"
+        },
+        {
+            "name": "Thunk CPS2CDStore_Read",
+            "org": "0x302e60",
+            "source": "obj/usa/CPS2CDStore_Read.bin"
+        },
+        {
+            "name": "Thunk CPS2CDStore_ReadString",
+            "org": "0x302ed0",
+            "source": "obj/usa/CPS2CDStore_ReadString.bin"
+        },
+        {
+            "name": "Thunk CPS2CDStore_ReadLine",
+            "org": "0x302f50",
+            "source": "obj/usa/CPS2CDStore_ReadLine.bin"
+        },
+        {
+            "name": "Thunk CPS2CDStore_Write",
+            "org": "0x302ff0",
+            "source": "obj/usa/CPS2CDStore_Write.bin"
+        },
+        {
+            "name": "Thunk CPS2CDStore_Resize",
+            "org": "0x303000",
+            "source": "obj/usa/CPS2CDStore_Resize.bin"
+        },
+        {
+            "name": "Thunk CPS2CDStore_GetSize",
+            "org": "0x303010",
+            "source": "obj/usa/CPS2CDStore_GetSize.bin"
+        },
+        {
+            "name": "Thunk CPS2CDStore_GetCurrPos",
+            "org": "0x303060",
+            "source": "obj/usa/CPS2CDStore_GetCurrPos.bin"
+        },
+        {
+            "name": "Thunk CPS2CDStore_IsOpen",
+            "org": "0x3030b0",
+            "source": "obj/usa/CPS2CDStore_IsOpen.bin"
+        }
+    ]
+}

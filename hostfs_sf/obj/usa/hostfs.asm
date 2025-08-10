@@ -1,0 +1,93 @@
+; This file is generated. DO NOT MODIFY IT!
+.ps2
+.include "regions/usa.inc"
+.create "obj/usa/CPS2CDStore_ct.bin", CPS2CDStore_ct
+.org CPS2CDStore_ct
+CPS2CDStore_ct_thunk:
+    j CPS2DiskStore_ct
+    nop             ; not using the delay slot
+.close
+.create "obj/usa/CPS2CDStore_dt.bin", CPS2CDStore_dt
+.org CPS2CDStore_dt
+CPS2CDStore_dt_thunk:
+    j CPS2DiskStore_dt
+    nop             ; not using the delay slot
+.close
+.create "obj/usa/CPS2CDStore_Open.bin", CPS2CDStore_Open
+.org CPS2CDStore_Open
+CPS2CDStore_Open_thunk:
+    j CPS2DiskStore_Open
+    nop             ; not using the delay slot
+.close
+.create "obj/usa/CPS2CDStore_Close.bin", CPS2CDStore_Close
+.org CPS2CDStore_Close
+CPS2CDStore_Close_thunk:
+    j CPS2DiskStore_Close
+    nop             ; not using the delay slot
+.close
+.create "obj/usa/CPS2CDStore_SeekToBeginning.bin", CPS2CDStore_SeekToBeginning
+.org CPS2CDStore_SeekToBeginning
+CPS2CDStore_SeekToBeginning_thunk:
+    j CPS2DiskStore_SeekToBeginning
+    nop             ; not using the delay slot
+.close
+.create "obj/usa/CPS2CDStore_Seek.bin", CPS2CDStore_Seek
+.org CPS2CDStore_Seek
+CPS2CDStore_Seek_thunk:
+    j CPS2DiskStore_Seek
+    nop             ; not using the delay slot
+.close
+.create "obj/usa/CPS2CDStore_SeekToEnd.bin", CPS2CDStore_SeekToEnd
+.org CPS2CDStore_SeekToEnd
+CPS2CDStore_SeekToEnd_thunk:
+    j CPS2DiskStore_SeekToEnd
+    nop             ; not using the delay slot
+.close
+.create "obj/usa/CPS2CDStore_Read.bin", CPS2CDStore_Read
+.org CPS2CDStore_Read
+CPS2CDStore_Read_thunk:
+    j CPS2DiskStore_Read
+    nop             ; not using the delay slot
+.close
+.create "obj/usa/CPS2CDStore_ReadString.bin", CPS2CDStore_ReadString
+.org CPS2CDStore_ReadString
+CPS2CDStore_ReadString_thunk:
+    j CPS2DiskStore_ReadString
+    nop             ; not using the delay slot
+.close
+.create "obj/usa/CPS2CDStore_ReadLine.bin", CPS2CDStore_ReadLine
+.org CPS2CDStore_ReadLine
+CPS2CDStore_ReadLine_thunk:
+    j CPS2DiskStore_ReadLine
+    nop             ; not using the delay slot
+.close
+.create "obj/usa/CPS2CDStore_Write.bin", CPS2CDStore_Write
+.org CPS2CDStore_Write
+CPS2CDStore_Write_thunk:
+    j CPS2DiskStore_Write
+    nop             ; not using the delay slot
+.close
+.create "obj/usa/CPS2CDStore_Resize.bin", CPS2CDStore_Resize
+.org CPS2CDStore_Resize
+CPS2CDStore_Resize_thunk:
+    j CPS2DiskStore_Resize
+    nop             ; not using the delay slot
+.close
+.create "obj/usa/CPS2CDStore_GetSize.bin", CPS2CDStore_GetSize
+.org CPS2CDStore_GetSize
+CPS2CDStore_GetSize_thunk:
+    j CPS2DiskStore_GetSize
+    nop             ; not using the delay slot
+.close
+.create "obj/usa/CPS2CDStore_GetCurrPos.bin", CPS2CDStore_GetCurrPos
+.org CPS2CDStore_GetCurrPos
+CPS2CDStore_GetCurrPos_thunk:
+    j CPS2DiskStore_GetCurrPos
+    nop             ; not using the delay slot
+.close
+.create "obj/usa/CPS2CDStore_IsOpen.bin", CPS2CDStore_IsOpen
+.org CPS2CDStore_IsOpen
+CPS2CDStore_IsOpen_thunk:
+    j CPS2DiskStore_IsOpen
+    nop             ; not using the delay slot
+.close

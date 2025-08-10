@@ -1,0 +1,6 @@
+.create "obj/{{region}}/{{source_func}}.bin", {{source_func}}
+.org {{source_func}}
+{{source_func}}_thunk:
+    j {{target_func}}
+    nop             ; not using the delay slot
+.close
