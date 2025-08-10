@@ -20,6 +20,7 @@ patch_json = {
 
 def parse_equates():
     # Pull out equates from the region include file.
+    # This "parser" is incredibly brittle. But it should work
     with open(f'regions/{region}.inc', 'r') as incFile:
         for line in incFile:
             line = line.removesuffix('\n')
@@ -43,7 +44,7 @@ parse_equates()
 # Add a patch segment for each thunk
 for equate_name, equate_value in known_equates.items():
     patch_json['patchSegments'].append({
-        'name': f'Thunk {equate_name}',
+        'name': f'Thunk {equate_name.replace('_', '::')}',
         'org': equate_value,
         'source': f'obj/{region}/{equate_name}.bin'
     })

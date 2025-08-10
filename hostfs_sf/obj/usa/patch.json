@@ -4,77 +4,77 @@
     "patchDescription": "HostFS for Starfighter (region usa)",
     "patchSegments": [
         {
-            "name": "Thunk CPS2CDStore_ct",
+            "name": "Thunk CPS2CDStore::ct",
             "org": "0x302990",
             "source": "obj/usa/CPS2CDStore_ct.bin"
         },
         {
-            "name": "Thunk CPS2CDStore_dt",
+            "name": "Thunk CPS2CDStore::dt",
             "org": "0x302b20",
             "source": "obj/usa/CPS2CDStore_dt.bin"
         },
         {
-            "name": "Thunk CPS2CDStore_Open",
+            "name": "Thunk CPS2CDStore::Open",
             "org": "0x302c20",
             "source": "obj/usa/CPS2CDStore_Open.bin"
         },
         {
-            "name": "Thunk CPS2CDStore_Close",
+            "name": "Thunk CPS2CDStore::Close",
             "org": "0x302d20",
             "source": "obj/usa/CPS2CDStore_Close.bin"
         },
         {
-            "name": "Thunk CPS2CDStore_SeekToBeginning",
+            "name": "Thunk CPS2CDStore::SeekToBeginning",
             "org": "0x302d50",
             "source": "obj/usa/CPS2CDStore_SeekToBeginning.bin"
         },
         {
-            "name": "Thunk CPS2CDStore_Seek",
+            "name": "Thunk CPS2CDStore::Seek",
             "org": "0x302da0",
             "source": "obj/usa/CPS2CDStore_Seek.bin"
         },
         {
-            "name": "Thunk CPS2CDStore_SeekToEnd",
+            "name": "Thunk CPS2CDStore::SeekToEnd",
             "org": "0x302e00",
             "source": "obj/usa/CPS2CDStore_SeekToEnd.bin"
         },
         {
-            "name": "Thunk CPS2CDStore_Read",
+            "name": "Thunk CPS2CDStore::Read",
             "org": "0x302e60",
             "source": "obj/usa/CPS2CDStore_Read.bin"
         },
         {
-            "name": "Thunk CPS2CDStore_ReadString",
+            "name": "Thunk CPS2CDStore::ReadString",
             "org": "0x302ed0",
             "source": "obj/usa/CPS2CDStore_ReadString.bin"
         },
         {
-            "name": "Thunk CPS2CDStore_ReadLine",
+            "name": "Thunk CPS2CDStore::ReadLine",
             "org": "0x302f50",
             "source": "obj/usa/CPS2CDStore_ReadLine.bin"
         },
         {
-            "name": "Thunk CPS2CDStore_Write",
+            "name": "Thunk CPS2CDStore::Write",
             "org": "0x302ff0",
             "source": "obj/usa/CPS2CDStore_Write.bin"
         },
         {
-            "name": "Thunk CPS2CDStore_Resize",
+            "name": "Thunk CPS2CDStore::Resize",
             "org": "0x303000",
             "source": "obj/usa/CPS2CDStore_Resize.bin"
         },
         {
-            "name": "Thunk CPS2CDStore_GetSize",
+            "name": "Thunk CPS2CDStore::GetSize",
             "org": "0x303010",
             "source": "obj/usa/CPS2CDStore_GetSize.bin"
         },
         {
-            "name": "Thunk CPS2CDStore_GetCurrPos",
+            "name": "Thunk CPS2CDStore::GetCurrPos",
             "org": "0x303060",
             "source": "obj/usa/CPS2CDStore_GetCurrPos.bin"
         },
         {
-            "name": "Thunk CPS2CDStore_IsOpen",
+            "name": "Thunk CPS2CDStore::IsOpen",
             "org": "0x3030b0",
             "source": "obj/usa/CPS2CDStore_IsOpen.bin"
         }
