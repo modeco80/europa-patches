@@ -24,6 +24,7 @@ define make_asm
 $(dir $(2))$(basename $(notdir $(1))).asm: $(1)
 	$(TOP)/make/headerize_asm.py $(1) $(dir $(2))$(basename $(notdir $(1))).asm $(REGION)
 
-$(2): $(dir $(2))$(basename $(notdir $(1))).asm
+$(2): obj/$(REGION)/ $(dir $(2))$(basename $(notdir $(1))).asm
 	armips -strequ region $(REGION) -sym $(dir $(2))$(basename $(notdir $(1))).sym $(dir $(2))$(basename $(notdir $(1))).asm
+	mv *.bin obj/$(REGION)/
 endef

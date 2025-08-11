@@ -31,20 +31,16 @@ def parse_equates():
                 continue
             line = re.sub(';.*', '', line)
             line = line.strip()
-
             split = line.split(' ')
-            # don't care
-            if not split[0].startswith('CPS2CDStore_'):
-                continue
-            #known_equates[split[0]] = int(split[2], 16)
-            known_equates[split[0]] = split[2]
+            if split[0].startswith('CPS2CDStore_') or split[0].startswith('sceCdSt') or split[0].startswith('EuropaCD') or split[0].startswith('mpeg_'):
+                known_equates[split[0]] = split[2]
 
 parse_equates()
 
 # Add a patch segment for each thunk
 for equate_name, equate_value in known_equates.items():
     patch_json['patchSegments'].append({
-        'name': f'Thunk {equate_name.replace('_', '::')}',
+        'name': f'{equate_name.replace('_', '::')}',
         'org': equate_value,
         'source': f'obj/{region}/{equate_name}.bin'
     })

@@ -43,3 +43,31 @@ CPS2DiskStore_Resize equ 0x13cd30
 CPS2DiskStore_GetSize equ 0x13cd40
 CPS2DiskStore_GetCurrPos equ 0x13cd70
 CPS2DiskStore_IsOpen equ 0x13cda0
+
+; libc routines
+strcpy equ 0x404750
+strcat equ 0x404348
+
+; SCE FIO routines
+; We call these in the CD stream rewrite
+sceOpen equ 0x3fa110
+sceClose equ 0x3fa268
+sceLseek equ 0x3fa320
+sceRead equ 0x3fa490
+
+; SCE CD stream routines
+; These are rewritten entirely. See scecdst_rewrite.asm
+sceCdStInit equ 0x415d90 
+sceCdStStart equ 0x415dc0
+sceCdStStop equ 0x415e28
+sceCdStRead equ 0x415e60
+
+; europa.cd file read routines
+; these should be thunked to become useless
+;EuropaCD_Load equ 0x302170
+;EuropaCD_Lookup equ 0x3025d0
+
+; MPEG player routines
+; (and pieces of code we patch)
+mpeg_first_chunk equ 0x44fe1c
+mpeg_second_chunk equ 0x4500ec

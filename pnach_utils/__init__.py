@@ -54,6 +54,6 @@ class PnachWriter:
             put_bytes += bytes(4 - len(bytestring))
 	
        byte_string = binascii.hexlify(put_bytes).decode('utf-8')
-       self._file.write(f'patch=1,EE,{self._addr:08x},word,{byte_string}\n')
+       self._file.write(f'patch=0,EE,{self._addr:08x},word,{byte_string}\n')
        self._addr += 0x4
 	

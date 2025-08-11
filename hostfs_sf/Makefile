@@ -4,6 +4,14 @@ ARMIPS ?= armips
 
 REGION ?= usa
 
+# crc for each thing
+ifeq ($(REGION),usa)
+PNACH_CRC = F32494AC
+else
+$(error invalid region)
+endif
+
+
 # Set some stuff
 PNACH_NAME = hostfs
 
@@ -11,7 +19,10 @@ THUNK_SCRIPTS = generate_thunk_asm.py templates/thunk.jinja2
 DEPS = $(OBJS)
 PNACH_JSON = obj/$(REGION)/patch.json
 
-OBJS := obj/$(REGION)/CPS2CDStore_ct.bin
+# asm chunks 
+OBJS := obj/$(REGION)/CPS2CDStore_ct.bin \
+		obj/$(REGION)/sceCdStInit.bin \
+		obj/$(REGION)/mpeg_first_chunk.bin
 
 include $(TOP)/make/rules.mk
 
@@ -34,4 +45,7 @@ obj/$(REGION)/hostfs_thunks.asm: obj/$(REGION)/ regions/$(REGION).inc $(THUNK_SC
 	$(TOP)/make/headerize_asm.py obj/$(REGION)/hostfs_thunks_noheader.asm $@ $(REGION)
 
 # ASM products
-$(eval $(call make_asm,obj/$(REGION)/hostfs_thunks.asm,obj/$(REGION)/CPS2CDStore_ct.bin))
+$(eval $(call make_asm_without_headerize,obj/$(REGION)/hostfs_thunks.asm,obj/$(REGION)/CPS2CDStore_ct.bin))
+#$(eval $(call make_asm,europacd.asm,obj/$(REGION)/EuropaCD_Load.bin))
+$(eval $(call make_asm,scecdst.asm,obj/$(REGION)/sceCdStInit.bin))
+$(eval $(call make_asm,mpeg_video.asm,obj/$(REGION)/mpeg_first_chunk.bin))
